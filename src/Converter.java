@@ -1,13 +1,15 @@
 public class Converter {
-    static double oneSteplenght = 0.00075; // длина одного шага в километрах
-    static double oneStepEnerg = 0.05; // калорий за один шаг
+    static double oneSteplenghtCm = 75; //длина шага в сантиметрах
+    static double oneStepEnergCal = 50; //калорий за один шаг
     double distanceInMonth(int sumSteps) { //пройденная дистанция за месяц
-        double distance = sumSteps * oneSteplenght;
+        double oneSteplenghtKm = oneSteplenghtCm / 100000; //переводим шаг из сантиметры в километры
+        double distance = sumSteps * oneSteplenghtKm;
         return  distance;
     }
 
     double energInMonth(int sumSteps){ //количество каллорий за месяц
-        double energ = sumSteps * oneStepEnerg;
+        double oneStepEnergKcal = oneStepEnergCal / 1000; //переводим калории в килокалории
+        double energ = sumSteps * oneStepEnergKcal;
         return energ;
     }
 }
