@@ -18,7 +18,7 @@ public class Main {
             if (userInput == 2) { //печать статистики за выбранный месяц
                 printMonths();
                 int month = scanner.nextInt();
-                stepTracker.calcStepsMonth(month);
+                stepTracker.calcSteps(month);
             }
             if (userInput == 3) { //дневная цель
                 System.out.println("Введите количество шагов, которые будут являться вашей целью");
